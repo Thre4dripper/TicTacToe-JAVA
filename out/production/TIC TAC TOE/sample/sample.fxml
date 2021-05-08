@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label layoutX="178.0" layoutY="2.0" text="TIC TAC TOE" textFill="#5686bf">
+         <font>
+            <Font name="Consolas Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="2.0" layoutY="407.0" text="Made by - Ijlal Ahmad">
+         <font>
+            <Font name="Consolas Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="mode_combo" layoutX="70.0" layoutY="62.0" onAction="#setMode_combo" prefHeight="26.0" prefWidth="109.0" />
+      <Label layoutX="14.0" layoutY="67.0" text="Mode" />
+      <VBox fx:id="vbox" layoutX="220.0" layoutY="100.0" prefHeight="270.0" prefWidth="330.0" spacing="1.0">
+         <children>
+            <HBox fx:id="hbox1" prefHeight="90.0" spacing="1.0">
+               <children>
+                  <Pane fx:id="pane1" onMouseClicked="#setpane1" onMouseEntered="#hoverpane1" onMouseExited="#removePane1" onMouseMoved="#hoverpane1" prefHeight="90.0" prefWidth="110.0" />
+                  <Line endY="90.0" stroke="#5686bf" strokeWidth="3.0" />
+                  <Pane fx:id="pane2" onMouseClicked="#setpane2" onMouseEntered="#hoverpane2" onMouseExited="#removePane2" onMouseMoved="#hoverpane2" prefHeight="90.0" prefWidth="110.0" />
+                  <Line endY="90.0" stroke="#5686bf" strokeWidth="3.0" />
+                  <Pane fx:id="pane3" onMouseClicked="#setpane3" onMouseEntered="#hoverpane3" onMouseExited="#removePane3" onMouseMoved="#hoverpane3" prefHeight="90.0" prefWidth="110.0" />
+               </children>
+            </HBox>
+            <Line endX="330.0" stroke="#5686bf" strokeWidth="3.0" />
+            <HBox fx:id="hbox2" prefHeight="90.0" spacing="1.0">
+               <children>
+                  <Pane fx:id="pane4" onMouseClicked="#setpane4" onMouseEntered="#hoverpane4" onMouseExited="#removePane4" onMouseMoved="#hoverpane4" prefHeight="90.0" prefWidth="110.0" />
+                  <Line endY="90.0" stroke="#5686bf" strokeWidth="3.0" />
+                  <Pane fx:id="pane5" onMouseClicked="#setpane5" onMouseEntered="#hoverpane5" onMouseExited="#removePane5" onMouseMoved="#hoverpane5" prefHeight="90.0" prefWidth="110.0" />
+                  <Line endY="90.0" stroke="#5686bf" strokeWidth="3.0" />
+                  <Pane fx:id="pane6" onMouseClicked="#setpane6" onMouseEntered="#hoverpane6" onMouseExited="#removePane6" onMouseMoved="#hoverpane6" prefHeight="90.0" prefWidth="110.0" />
+               </children>
+            </HBox>
+            <Line endX="330.0" stroke="#5686bf" strokeWidth="3.0" />
+            <HBox fx:id="hbox3" prefHeight="90.0" spacing="1.0">
+               <children>
+                  <Pane fx:id="pane7" onMouseClicked="#setpane7" onMouseEntered="#hoverpane7" onMouseExited="#removePane7" onMouseMoved="#hoverpane7" prefHeight="90.0" prefWidth="110.0" />
+                  <Line endY="90.0" stroke="#5686bf" strokeWidth="3.0" />
+                  <Pane fx:id="pane8" onMouseClicked="#setpane8" onMouseEntered="#hoverpane8" onMouseExited="#removePane8" onMouseMoved="#hoverpane8" prefHeight="90.0" prefWidth="110.0" />
+                  <Line endY="90.0" stroke="#5686bf" strokeWidth="3.0" />
+                  <Pane fx:id="pane9" onMouseClicked="#setpane9" onMouseEntered="#hoverpane9" onMouseExited="#removePane9" onMouseMoved="#hoverpane9" prefHeight="90.0" prefWidth="110.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="14.0" layoutY="107.0" text="Difficulty" />
+      <ComboBox fx:id="diff_combo" layoutX="70.0" layoutY="103.0" prefHeight="26.0" prefWidth="109.0" />
+      <Label layoutX="14.0" layoutY="148.0" text="Marker" />
+      <ComboBox fx:id="marker_combo" layoutX="70.0" layoutY="144.0" onAction="#setMarker_combo" prefHeight="26.0" prefWidth="109.0" />
+      <Button layoutX="134.0" layoutY="264.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
+      <Button layoutX="72.0" layoutY="264.0" mnemonicParsing="false" onAction="#start" text="Start" />
+   </children>
+</AnchorPane>
